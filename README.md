@@ -10,7 +10,7 @@ You can use this project for creating many forms like Sign up form,contact form,
 
 ``` git
 
-        git clone https://github.com/Varshil-Shah/Javascript-form-validation
+        git clone https://github.com/Varshil-Shah/Javascript-form-validation.git
 
 ```
 
