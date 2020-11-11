@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Javascript Validation</title>
+</head>
+
+<body>
+        <div class="container">
+                <div class="header">
+                        <h2>Create Account</h2>
+                </div>
+                <form action="" method="" id="form">
+                        <div class="form-control">
+                                <label for="">Username</label>
+                                <input onkeyup="usernameCheck(this.value)" type="text" name="" id="username"
+                                        placeholder="Enter your username">
+                                <i class="fa fa-check-circle"></i>
+                                <i class="fa fa-exclamation-circle"></i>
+                                <small>Error message</small>
+                        </div>
+                        <div class="form-control">
+                                <label for="">Email</label>
+                                <input onkeyup="emailCheck(this.value)" type="text" name="" id="email"
+                                        placeholder="Enter your email">
+                                <i class="fa fa-check-circle"></i>
+                                <i class="fa fa-exclamation-circle"></i>
+                                <small>Error message</small>
+                        </div>
+                        <div class="form-control">
+                                <label for="">Phone number</label>
+                                <input onkeyup="numberCheck(this.value)" type="text" name="" id="phone"
+                                        placeholder="Enter your phone number" title="Add 10 digit phone number">
+                                <!-- pattern="[0-9]{10}" -->
+                                <i class="fa fa-check-circle"></i>
+                                <i class="fa fa-exclamation-circle"></i>
+                                <small>Error message</small>
+                        </div>
+                        <div class="form-control">
+                                <label for="">Password</label>
+                                <input title="password must contain uppercase and lowercase characters,special character and number"
+                                        type="password" onkeyup="passwordCheck(this.value)" name="" id="password"
+                                        placeholder="Enter your password">
+                                <!-- pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" -->
+                                <i class="fa fa-check-circle"></i>
+                                <i class="fa fa-exclamation-circle"></i>
+                                <small>Error message</small>
+                        </div>
+                        <div class="form-control">
+                                <label for="">Confirm password</label>
+                                <input onkeyup="cpasswordCheck(this.value)" type="password" name="" id="cpassword"
+                                        placeholder="Confirm your password">
+                                <i class="fa fa-check-circle"></i>
+                                <i class="fa fa-exclamation-circle"></i>
+                                <small id="cpass">Error message</small>
+                        </div>
+                        <button type="submit" class="btn" id="button" value="Submit">Submit</button>
+                </form>
+        </div>
+
+        <script src="form.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+
+</html>
